@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function aisha(value){
+            document.getElementById("maryam").value += value;
+        }
+        function clearDisplay() {
+      document.getElementById('maryam'). value = '';
+    }
+    function calculate() {
+      var expression = document.getElementById('maryam').value;
+      var result = eval(expression);
+      document.getElementById('maryam').value = result;
+    }
+    </script>
+    <style>
+        .cal{
+            border: 5px groove #000;
+            height: 350px;
+            width: 250px;
+            background-color: #0000006f;
+            border-radius: 10px;
+                 
+        }
+        .cal input[type="button"]{
+            margin-top: 10px;
+            margin-left: 5px;
+            width: 70px;
+            margin-top: 10px;
+            border: 4px;
+            border-radius: 5px;
+            height: 25px;
+
+        }
+        #maryam{
+            width: 95%;
+            height: 20%px;
+            margin-left: 4px;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cal">
+    <input type="tex" id="maryam" readonly><br>
+    <input type="button" value="1" onclick="aisha('1')">
+    <input type="button" value="2" onclick="aisha('2')">
+    <input type="button" value="3" onclick="aisha('3')">
+    <input type="button" value="4" onclick="aisha('4')">
+    <input type="button" value="5" onclick="aisha('5')">
+    <input type="button" value="6" onclick="aisha('6')">
+    <input type="button" value="7" onclick="aisha('7')">
+    <input type="button" value="8" onclick="aisha('8')">
+    <input type="button" value="9" onclick="aisha('9')">
+   <input type="button" value="+" onclick="aisha('+')">
+    <input type="button" value="-" onclick="aisha('-')">
+    <input type="button" value="*" onclick="aisha('*')">
+    <input type="button" value="/" onclick="aisha('/')">
+    <input type="button" value="0" onclick="aisha('0')">
+    <input type="button" value="." onclick="aisha('.')">
+    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="=" onclick="calculate()">
+
+    </div>
+</body>
+</html>

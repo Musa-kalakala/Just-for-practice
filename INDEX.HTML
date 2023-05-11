@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    /* wannan shine code na jikin gabadaya acikin css*/
+    .calculator {
+      width: 300px;
+      padding: 10px;
+      border: 20px groove #000;
+      border-radius: 5px;
+      background-color: #0000008e;
+      height: 400px;      
+      padding-top: 30px;
+      box-shadow: 10px;
+    }
+    /* wannan code na bottons acikin css */
+    .calculator input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 18px;
+    }
+    /* code na hover idan zaka dannan sai ya canza color */
+    .calculator input[type="button"]:hover{
+      font-size: 20px;
+      background-color: rgba(0, 255, 255, 0.688);
+    }
+    /* sauran code na botond */
+    .calculator input[type="button"] {
+      width: 30%;
+      padding: 5px;
+      margin-bottom: 5px;
+      font-size: 18px;
+      border-radius: 20px;
+      border: 3px groove blue;
+      background-color: #ffa;
+      font-weight: bold;
+    }
+    /* code wanda yashirya guraren zaman botons */
+    .calculator input[type="button"]:nth-child(3),
+    .calculator input[type="button"]:nth-child(4) {
+      width: 30%;
+    }
+
+    
+    .calculator input[type="button"]:nth-child(5),
+    .calculator input[type="button"]:nth-child(6) {
+      margin-left: 2%;
+    }
+    .calculator input[type="button"]:nth-child(4),
+    .calculator input[type="button"]:nth-child(5),
+    .calculator input[type="button"]:nth-child(6){
+        margin-left: 1px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- sune code na botons gabadaya a HTML -->
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <input type="button" value="7" onclick="appendToDisplay('7')">
+    <input type="button" value="8" onclick="appendToDisplay('8')">
+    <input type="button" value="9" onclick="appendToDisplay('9')">
+    <input type="button" value="4" onclick="appendToDisplay('4')">
+    <input type="button" value="5" onclick="appendToDisplay('5')">
+    <input type="button" value="6" onclick="appendToDisplay('6')">
+    <input type="button" value="1" onclick="appendToDisplay('1')">
+    <input type="button" value="2" onclick="appendToDisplay('2')">
+    <input type="button" value="3" onclick="appendToDisplay('3')">
+    <input type="button" value="+" onclick="appendToDisplay('+')">
+    <input type="button" value="-" onclick="appendToDisplay('-')">
+    <input type="button" value="*" onclick="appendToDisplay('*')">
+    <input type="button" value="/" onclick="appendToDisplay('/')">
+    <input type="button" value="0" onclick="appendToDisplay('0')">
+    <input type="button" value="." onclick="appendToDisplay('.')">
+    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="=" onclick="calculate()">
+    <h3 style="color: aquamarine; font-weight: bold;">Simple calculator project one(1)</h3>
+    <marquee scrollamount="3" style="font-weight: bold; color: #fff;">ALIYU MUSA KALAKAL</marquee>
+    <marquee direction="right" scrollamount="3" style="font-weight: bold;color: #fff;" >ALIYU MUSA KALAKAL</marquee>
+  </div>
+
+  <script>
+    // code na javascript wanda yake calculating
+    function appendToDisplay(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function calculate() {
+      var expression = document.getElementById('display').value;
+      var result = eval(expression);
+      document.getElementById('display').value = result;
+    }
+  </script>
+</body>
+</html>
